@@ -1,13 +1,20 @@
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 import background from "../../public/images/asset/start_bg.png";
 import logo from "../../public/images/asset/logo.png";
 
 const StartPage = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/test");
+  };
+
   return (
     <Container>
       <Logo src={logo} alt="Logo" />
       <SubTitle>나랑 닮은 주술회전 캐릭터는?</SubTitle>
-      <Button>START</Button>
+      <Button onClick={handleClick}>START</Button>
     </Container>
   );
 };
