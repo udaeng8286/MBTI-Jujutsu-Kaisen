@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 import StartPage from "./pages/StartPage";
 import TestPage from "./pages/TestPage";
+import LoadingPage from "./pages/LoadingPage";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<StartPage />} />
           <Route path="/test" element={<TestPage />} />
+          <Route path="/loading" element={<LoadingPage />} />
         </Routes>
       </Router>
     </Container>
