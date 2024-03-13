@@ -27,8 +27,8 @@ const Container = styled.div`
 `;
 
 const Dot = styled.div`
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   background-color: #2f3648;
   border-radius: 50%;
   margin: 0 8px;

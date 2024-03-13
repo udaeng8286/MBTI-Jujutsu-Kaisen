@@ -15,6 +15,7 @@ export default LoadingPage;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  /* justify-content: center; */
   align-items: center;
   margin: 0 auto;
   height: 100vh;
@@ -28,8 +29,11 @@ const Container = styled.div`
 `;
 
 const Text = styled.div`
+  margin-top: 10rem;
+  margin-bottom: 1.5rem;
   font-weight: bold;
   @media (max-width: 768px) {
     margin-top: -1rem;
   }
+  font-size: 28px;
 `;
