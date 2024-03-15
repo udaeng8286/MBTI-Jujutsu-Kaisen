@@ -43,6 +43,7 @@ const Logo = styled.img`
 `;
 
 const SubTitle = styled.div`
+  font-size: 24px;
   font-weight: bold;
   @media (max-width: 768px) {
     margin-top: -1rem;

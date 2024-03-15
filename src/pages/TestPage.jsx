@@ -91,7 +91,7 @@ const Container = styled.div`
 `;
 
 const TestContainer = styled.div`
-  width: 400px; //임시. 수정 필요
+  width: 90%;
 `;
 
 const QuestionWrapper = styled.div`
@@ -99,9 +99,12 @@ const QuestionWrapper = styled.div`
   background-color: #2f3648;
   padding: 1rem;
   border-radius: 10px;
+  white-space: pre-line;
 `;
-const Question = styled.text`
+
+const Question = styled.p`
   color: white;
+  font-weight: bold;
 `;
 
 const AnswerWrap = styled.div`
@@ -116,4 +119,5 @@ const Answer = styled.div`
   background-color: white;
   color: #2f3648;
   border-radius: 10px;
+  font-weight: bold;
 `;
