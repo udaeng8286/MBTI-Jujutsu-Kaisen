@@ -18,7 +18,7 @@ const TestPage = () => {
     J: 0,
   });
 
-  //선택된 답변들로 최종유형 계산 함수
+  // 선택된 답변들로 최종 유형 계산 함수
   const calculateType = () => {
     const type =
       (typeResult.E > typeResult.I ? "E" : "I") +
@@ -29,22 +29,26 @@ const TestPage = () => {
     return type;
   };
 
-  //사용자가 답변 선택할때 호출되는 함수
+  // 사용자가 답변 선택할 때 호출되는 함수
   const handleOptionSelect = (type) => {
-    //선택된 답변에 따라 결과 업데이트
-    setTypeResult((prevResult) => {
-      return {
-        ...prevResult,
-        [type]: prevResult[type] + 1,
-      };
-    });
-    //다음 질문으로 이동 또는 결과 페이지로 이동
+    // 선택된 답변에 따라 결과 업데이트
+    setTypeResult((prevResult) => ({
+      ...prevResult,
+      [type]: prevResult[type] + 1,
+    }));
+
+    // 다음 질문으로 이동 또는 결과 페이지로 이동
     if (currentIndex < questionData.length - 1) {
-      setCurrentIndex(currentIndex + 1);
+      setCurrentIndex((prevIndex) => {
+        const nextIndex = prevIndex + 1;
+        console.log("다음 인덱스 ", nextIndex);
+        console.log("남은 질문수 ", questionData.length - nextIndex);
+        return nextIndex;
+      });
     } else {
       const mbtiType = calculateType();
-      const encryptedMbtiType = mbtiType;
-      navigate(`/result?mbtiType=${encodeURIComponent(encryptedMbtiType)}`);
+      console.log("끝", mbtiType);
+      navigate(`/result?mbtiType=${encodeURIComponent(mbtiType)}`);
     }
   };
   console.log("결과", typeResult);
