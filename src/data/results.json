@@ -3,96 +3,96 @@
     "type": "ESFP",
     "character": "이노 타쿠마",
     "description": "당신은 사교성이 좋으며 정이 많아 사람들과 잘 어울립니다. 지루한 건 못 참아 바쁘게 움직입니다. 때때로 일을 크게 벌였다가 감당하지 못하기도 합니다.",
-    "characterImg": "/images/member/img.png"
+    "characterImg": "/images/character/TakumaIno.png"
   },
   {
     "type": "ESFJ",
-    "character": "아마이 린",
+    "character": "아마나이 리코",
     "description": "당신은 분위기를 잘 이끌고 사회성이 좋은 사람입니다. 상대방을 잘 배려하며 리액션도 잘합니다. 때때로 자신의 노력만큼 돌아오지 않는 호의에 상처 입기도 합니다.",
-    "characterImg": "/images/member/img.png"
+    "characterImg": "/images/character/RikoAmanai.png"
   },
   {
     "type": "ESTP",
     "character": "토도 아오이",
     "description": "당신은 친화력이 좋고 뒤끝이 없어 사람들과 두루두루 잘 지냅니다. 눈치를 보지 않고 스트레스도 잘 받지 않는 편입니다. 때때로 영혼 없다는 소리를 듣기도 합니다.",
-    "characterImg": "/images/member/img.png"
+    "characterImg": "/images/character/AoiTodo.png"
   },
   {
     "type": "ESTJ",
     "character": "쿠기사키 노바라",
     "description": "당신은 책임감이 강하고 체계적으로 일을 처리하는 능력이 있은 사람입니다. 목표 지향적이고 성실합니다. 때때로 본인과 다른 생각을 가진 사람을 이해하지 못하고 상처를 주기도 합니다.",
-    "characterImg": "/images/member/img.png"
+    "characterImg": "/images/character/NobaraKugisaki.png"
   },
   {
     "type": "ENFP",
     "character": "오리모토 리카",
     "description": "당신은 긍적적이며 다른 사람들에게 밝은 에너지를 주는 사람입니다. 감정이 풍부하고 거짓말을 잘 못합니다. 때때로 다른 사람의 말과 행동 또는 자신의 말과 행동에 대해 상처받고 후회하기도 합니다.",
-    "characterImg": "/images/member/img.png"
+    "characterImg": "/images/character/RikaOrimoto.png"
   },
   {
     "type": "ENFJ",
-    "character": "니타 아카리",
+    "character": "닛타 아카리",
     "description": "당신은 사람들의 마음을 이끌고 움직이는 능력이 있습니다. 의리가 강하고 주변 사람을 잘 챙깁니다. 때때로 감정에 휘둘려 가까운 상대에게 히스테리를 부리고 후회하는 일을 하기도 합니다.",
-    "characterImg": "/images/member/img.png"
+    "characterImg": "/images/character/NittaAkari.png"
   },
   {
     "type": "ENTP",
     "character": "고죠 사토루",
     "description": "당신은 자유로우며 느긋한 성격을 가진 사람입니다. 임기응변에 능하고 감정 표현이 솔직하고 직설적입니다. 때때로 상대방에게 상처를 주는 말을 하기도 하지만 본인은 기억을 못 하기도 합니다.",
-    "characterImg": "/images/member/img.png"
+    "characterImg": "/images/character/SatoruGojo.png"
   },
   {
     "type": "ENTJ",
-    "character": "스쿠나",
+    "character": "료멘 스쿠나",
     "description": "당신은 대담하면서도 강한 의지를 가진 사람입니다. 감정적인 문제로 일 처리를 못하는 일은 별로 없습니다. 때때로 비능률적이거나 자신에게 간섭하는 사람을 보면 화가 차오르기도 합니다.",
-    "characterImg": "/images/member/img.png"
+    "characterImg": "/images/character/RyomenSukuna.png"
   },
   {
     "type": "ISFP",
     "character": "이타도리 유지",
     "description": "당신은 마음이 따뜻하고 정이 많아 주변 사람들을 잘 챙깁니다. 사람을 만나는 걸 좋아하지만 집에 있는 것을 너무 좋아합니다. 때때로 약속이 취소되면 속으로 기뻐하며 집에서 연락 두절이 되기도 합니다.",
-    "characterImg": "/images/member/img.png"
+    "characterImg": "/images/character/YujiItadori.png"
   },
   {
     "type": "ISFJ",
     "character": "미와 카스미",
     "description": "당신은 배려심이 깊고 공감 능력이 높아서 같이 있는 사람들에 맞게 성격을 맞추곤 합니다. 성실하고 세심하여 다른 사람을 잘 챙깁니다. 때때로 다른 사람의 눈치를 봐 인간관계에 스트레스를 받기도 합니다.",
-    "characterImg": "/images/member/img.png"
+    "characterImg": "/images/character/KasumiMiwa.png"
   },
   {
     "type": "ISTP",
     "character": "후시구로 토우지",
     "description": "당신은 차분하고 조용한 편으로 낯을 많이 가리지만 친해지면 말도 많고 장난도 많이 칩니다. 때때로 해야 할 일을 미루고 미루다 발등이 타들어 갈 때 일을 몰아 하기도 합니다.",
-    "characterImg": "/images/member/img.png"
+    "characterImg": "/images/character/TojiFushiguro.png"
   },
   {
     "type": "ISTJ",
     "character": "후시구로 메구미",
     "description": "당신은 원리원칙적이며 계획적이며 책임감도 강합니다. 감정 표현이 조금 서툴지만 그만큼 말 한마디 한마디를 신중하게 합니다.  때때로 혼자가 제일 편하고 효율적이라는 생각을 하기도 합니다.",
-    "characterImg": "/images/member/img.png"
+    "characterImg": "/images/character/MegumiFushiguro.png"
   },
   {
     "type": "INFP",
     "character": "요시노 준페이",
     "description": "당신은 공감 능력이 뛰어나며 배려심이 좋아 따뜻한 사람입니다. 정말 가까워지기 전까지는 자신의 마음을 잘 표현하지 않습니다. 의미 부여를 잘해서 때때로 작은 말과 행동에 상처를 받기도 합니다.",
-    "characterImg": "/images/member/img.png"
+    "characterImg": "/images/character/JunpeiYoshino.png"
   },
   {
     "type": "INFJ",
     "character": "옷코츠 유타",
     "description": "당신은 다정하고 친절하여 주변 사람들로부터 호감을 사는 사람입니다. 신중하며 감정이 섬세하나 조절을 잘합니다. 때때로 자기 기준에 맞지 않는 사람은 마음속으로 분류하여 선을 그어버리기도 합니다.",
-    "characterImg": "/images/member/img.png"
+    "characterImg": "/images/character/YutaOkkotsu.png"
   },
   {
     "type": "INTP",
     "character": "이누마키 토게",
     "description": "당신은 어떤 상황에서도 냉정하고 침착하게 대응할 수 있는 능력을 가졌습니다. 웬만한 일에는 상처를 잘 받지 않으며 잡담을 잘 못하고 싫어합니다. 때때로 자발적 아웃사이더가 되기도 합니다.",
-    "characterImg": "/images/member/img.png"
+    "characterImg": "/images/character/TogeInumaki.png"
   },
   {
     "type": "INTJ",
     "character": "게토 스구루",
     "description": "당신은 자신의 판단력을 신뢰하고 문제를 해결하는 데 스스로에 대한 확신이 있는 사람입니다. 자신과 타인에 대한 기대치가 높아 완벽주의적인 면모가 있습니다. 때때로 자신과 의견이 다르면 다른 사람의 의견을 가뿐하게 묵살하기도 합니다.",
-    "characterImg": "/images/member/img.png"
+    "characterImg": "/images/character/SuguruGeto.png"
   }
 ]
