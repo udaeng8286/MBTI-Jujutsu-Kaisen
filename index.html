@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MBTI</title>
+    <script src="//developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+      const kakaoAppKey = import.meta.env.VITE_KAKAO_APP_KEY;
+      Kakao.init(kakaoAppKey);
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -2,13 +2,54 @@ import styled from "styled-components";
 import kakaoIcon from "../../public/images/asset/kakao.png";
 import twitterIcon from "../../public/images/asset/twitter.png";
 import linkIcon from "../../public/images/asset/link.png";
-
+import { useEffect } from "react";
 const ShareButton = () => {
-  const handleCopyLink = () => {
+  const currentUrl = window.location.href;
+
+  const handleTwitterShare = () => {
+    const shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(
+      window.location.href
+    )}&text=${encodeURIComponent(
+      "나와 닮은 성격 유형의 주술회전 캐릭터 테스트 결과를 확인해보세요!"
+    )}`;
+    window.open(shareUrl, "_blank");
+  };
+
+  useEffect(() => {
+    if (!Kakao.isInitialized()) {
+      Kakao.init(import.meta.env.VITE_KAKAO_APP_KEY);
+    }
+  }, []);
+
+  const handleKakaoShare = () => {
+    Kakao.Link.sendDefault({
+      objectType: "feed",
+      content: {
+        title: "내가 주술회전 캐릭터라면?",
+        description: "나와 비슷한 성격 유형의 주술회전 캐릭터를 알아봐요!!",
+        imageUrl: window.location.origin,
+        link: {
+          mobileWebUrl: currentUrl,
+          webUrl: currentUrl,
+        },
+      },
+      buttons: [
+        {
+          title: "결과 보러가기",
+          link: {
+            mobileWebUrl: currentUrl,
+            webUrl: currentUrl,
+          },
+        },
+      ],
+    });
+  };
+
+  const handkeLinkShare = () => {
     const shareData = {
       title: "결과 공유",
       text: "나와 닮은 성격 유형의 주술회전 캐릭터 테스트 결과를 확인해보세요!",
-      url: window.location.href,
+      url: currentUrl,
     };
 
     if (navigator.share) {
@@ -23,13 +64,13 @@ const ShareButton = () => {
 
   return (
     <Container>
-      <Button>
+      <Button onClick={handleTwitterShare}>
         <img src={twitterIcon} alt="Twitter Share" />
       </Button>
-      <Button>
+      <Button onClick={handleKakaoShare}>
         <img src={kakaoIcon} alt="Kakao Share" />
       </Button>
-      <Button onClick={handleCopyLink}>
+      <Button onClick={handkeLinkShare}>
         <img src={linkIcon} alt="Copy Link" />
       </Button>
     </Container>
@@ -45,7 +86,7 @@ const Container = styled.div`
 
 const Button = styled.button`
   max-width: 100px;
-  /* background: none; */
+  background: none;
   border: none;
   cursor: pointer;
   img {
