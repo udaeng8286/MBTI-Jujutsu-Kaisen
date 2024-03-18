@@ -14,7 +14,7 @@ function App() {
           <Route path="/" element={<StartPage />} />
           <Route path="/test" element={<TestPage />} />
           <Route path="/loading" element={<LoadingPage />} />
-          <Route path="/result" element={<ResultPagePage />} />
+          <Route path="/result" element={<ResultPage />} />
         </Routes>
       </Router>
     </Container>
