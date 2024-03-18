@@ -5,15 +5,20 @@ import linkIcon from "../../public/images/asset/link.png";
 
 const ShareButton = () => {
   const handleCopyLink = () => {
-    const linkToCopy = window.location.href;
-    navigator.clipboard
-      .writeText(linkToCopy)
-      .then(() => {
-        console.log("링크가 복사되었습니다.");
-      })
-      .catch((error) => {
-        console.error("링크 복사에 실패했습니다:", error);
-      });
+    const shareData = {
+      title: "결과 공유",
+      text: "나와 닮은 성격 유형의 주술회전 캐릭터 테스트 결과를 확인해보세요!",
+      url: window.location.href,
+    };
+
+    if (navigator.share) {
+      navigator
+        .share(shareData)
+        .then(() => console.log("공유 성공"))
+        .catch((error) => console.error("공유 실패:", error));
+    } else {
+      console.log("Share API를 지원하지 않는 브라우저입니다.");
+    }
   };
 
   return (
@@ -40,7 +45,7 @@ const Container = styled.div`
 
 const Button = styled.button`
   max-width: 100px;
-  background: none;
+  /* background: none; */
   border: none;
   cursor: pointer;
   img {
