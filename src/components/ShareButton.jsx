@@ -4,6 +4,18 @@ import twitterIcon from "../../public/images/asset/twitter.png";
 import linkIcon from "../../public/images/asset/link.png";
 
 const ShareButton = () => {
+  const handleCopyLink = () => {
+    const linkToCopy = window.location.href;
+    navigator.clipboard
+      .writeText(linkToCopy)
+      .then(() => {
+        console.log("링크가 복사되었습니다.");
+      })
+      .catch((error) => {
+        console.error("링크 복사에 실패했습니다:", error);
+      });
+  };
+
   return (
     <Container>
       <Button>
@@ -12,7 +24,7 @@ const ShareButton = () => {
       <Button>
         <img src={kakaoIcon} alt="Kakao Share" />
       </Button>
-      <Button>
+      <Button onClick={handleCopyLink}>
         <img src={linkIcon} alt="Copy Link" />
       </Button>
     </Container>
