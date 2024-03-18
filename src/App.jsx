@@ -4,6 +4,7 @@ import styled from "styled-components";
 import StartPage from "./pages/StartPage";
 import TestPage from "./pages/TestPage";
 import LoadingPage from "./pages/LoadingPage";
+import ResultPage from "./pages/ResultPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<StartPage />} />
           <Route path="/test" element={<TestPage />} />
           <Route path="/loading" element={<LoadingPage />} />
+          <Route path="/result" element={<ResultPage />} />
         </Routes>
       </Router>
     </Container>
