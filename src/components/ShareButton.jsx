@@ -65,13 +65,13 @@ const ShareButton = () => {
   return (
     <Container>
       <Button onClick={handleTwitterShare}>
-        <img src={twitterIcon} alt="Twitter Share" />
+        <Icon src={twitterIcon} alt="Twitter Share" />
       </Button>
       <Button onClick={handleKakaoShare}>
-        <img src={kakaoIcon} alt="Kakao Share" />
+        <Icon src={kakaoIcon} alt="Kakao Share" />
       </Button>
       <Button onClick={handkeLinkShare}>
-        <img src={linkIcon} alt="Copy Link" />
+        <Icon src={linkIcon} alt="Copy Link" />
       </Button>
     </Container>
   );
@@ -80,17 +80,20 @@ export default ShareButton;
 
 const Container = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  flex: 1;
 `;
 
 const Button = styled.button`
-  max-width: 100px;
+  width: 76px;
+  height: 76px;
   background: none;
   border: none;
   cursor: pointer;
-  img {
-    width: 100%;
-    height: auto;
-  }
+`;
+
+const Icon = styled.img`
+  width: 100%;
+  height: auto;
 `;
