@@ -3,6 +3,7 @@ import kakaoIcon from "../../public/images/asset/kakao.png";
 import twitterIcon from "../../public/images/asset/twitter.png";
 import linkIcon from "../../public/images/asset/link.png";
 import { useEffect } from "react";
+
 const ShareButton = () => {
   const currentUrl = window.location.href;
 
