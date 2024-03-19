@@ -1,10 +1,13 @@
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import ShareButton from "../components/ShareButton";
 import background from "../../public/images/asset/result_bg.png";
 import characterData from "../data/results.json";
 import { useLocation, useNavigate } from "react-router-dom";
+import LoadingPage from "./LoadingPage";
 
 const ResultPage = () => {
+  const [loading, setLoading] = useState(true);
   const location = useLocation();
   const navigate = useNavigate();
   const mbtiType = new URLSearchParams(location.search).get("mbtiType");
@@ -13,27 +16,41 @@ const ResultPage = () => {
     (character) => character.type === mbtiType
   );
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
   const handleReplay = () => {
     navigate("/");
   };
 
   return (
     <Container>
-      <CharacterImg src={characterInfo.characterImg} />
-      <InfoContainer>
-        <Character>{characterInfo.character}</Character>
-        <Info>{characterInfo.description}</Info>
-      </InfoContainer>
-      <BottomSection>
-        <ShareButton />
-        <ReplayButton onClick={handleReplay}>다시하기</ReplayButton>
-      </BottomSection>
+      {loading ? (
+        <LoadingPage />
+      ) : (
+        <ResultContainer>
+          <CharacterImg src={characterInfo.characterImg} />
+          <InfoContainer>
+            <Character>{characterInfo.character}</Character>
+            <Info>{characterInfo.description}</Info>
+          </InfoContainer>
+          <BottomSection>
+            <ShareButton />
+            <ReplayButton onClick={handleReplay}>다시하기</ReplayButton>
+          </BottomSection>
+        </ResultContainer>
+      )}
     </Container>
   );
 };
 export default ResultPage;
 
-const Container = styled.div`
+const Container = styled.div``;
+
+const ResultContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,7 +67,7 @@ const Container = styled.div`
 `;
 
 const CharacterImg = styled.img`
-  width: 300px;
+  width: 280px;
   margin-bottom: 1.5rem;
 `;
 
@@ -62,7 +79,7 @@ const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1rem;
+  padding: 2rem 1.5rem;
   font-weight: bold;
 `;
 
