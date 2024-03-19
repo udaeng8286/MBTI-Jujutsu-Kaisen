@@ -97,7 +97,7 @@ const TestContainer = styled.div`
 const QuestionWrapper = styled.div`
   width: 100%;
   background-color: #2f3648;
-  padding: 1rem;
+  padding: 2rem 1rem;
   border-radius: 10px;
   white-space: pre-line;
 `;
@@ -120,4 +120,10 @@ const Answer = styled.div`
   color: #2f3648;
   border-radius: 10px;
   font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.2s;
+
+  &:hover {
+    background-color: #cdcdd5;
+  }
 `;
