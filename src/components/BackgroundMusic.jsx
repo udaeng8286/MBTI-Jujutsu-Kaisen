@@ -17,16 +17,24 @@ const BackgroundMusic = () => {
   };
 
   return (
-    <Container>
-      <Button onClick={toggleMusic}>
-        {isPlaying ? <FaVolumeUp /> : <FaVolumeMute />}
-      </Button>
-    </Container>
+    <Button onClick={toggleMusic}>
+      {isPlaying ? <FaVolumeUp /> : <FaVolumeMute />}
+    </Button>
   );
 };
 
 export default BackgroundMusic;
 
-const Container = styled.div``;
-
-const Button = styled.div``;
+const Button = styled.div`
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  font-size: 24px;
+  color: #2f3648;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.2s;
+  &:hover {
+    color: #d2d2d2;
+  }
+`;
