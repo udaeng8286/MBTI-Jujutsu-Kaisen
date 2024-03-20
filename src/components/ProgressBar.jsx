@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-const ProgressBar = () => {
+const ProgressBar = ({ currentIndex, totalQuestions }) => {
+  const progress = ((currentIndex + 1) / totalQuestions) * 100;
   return (
     <OuterProgressBar>
-      <InnerProgressBar></InnerProgressBar>
+      <InnerProgressBar progress={progress} />
     </OuterProgressBar>
   );
 };
@@ -23,6 +24,7 @@ const OuterProgressBar = styled.div`
 `;
 
 const InnerProgressBar = styled.div`
+  width: ${(props) => props.progress}%;
   border-radius: 5px;
   background: #fff;
   height: 100%;

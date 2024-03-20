@@ -42,22 +42,21 @@ const TestPage = () => {
     if (currentIndex < questionData.length - 1) {
       setCurrentIndex((prevIndex) => {
         const nextIndex = prevIndex + 1;
-        console.log("다음 인덱스 ", nextIndex);
-        console.log("남은 질문수 ", questionData.length - nextIndex);
         return nextIndex;
       });
     } else {
       const mbtiType = calculateType();
-      console.log("끝", mbtiType);
       navigate(`/result?mbtiType=${encodeURIComponent(mbtiType)}`);
     }
   };
-  console.log("결과", typeResult);
 
   return (
     <Container>
       <TestContainer>
-        <ProgressBar />
+        <ProgressBar
+          currentIndex={currentIndex}
+          totalQuestions={questionData.length}
+        />
         <QuestionWrapper>
           <Question>{questionData[currentIndex].question}</Question>
         </QuestionWrapper>
