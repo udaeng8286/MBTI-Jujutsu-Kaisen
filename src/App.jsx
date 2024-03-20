@@ -3,12 +3,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 import StartPage from "./pages/StartPage";
 import TestPage from "./pages/TestPage";
-import LoadingPage from "./pages/LoadingPage";
 import ResultPage from "./pages/ResultPage";
+import BackgroundMusic from "./components/BackgroundMusic";
 
 function App() {
   return (
     <Container>
+      <BackgroundMusic />
       <Router>
         <Routes>
           <Route path="/" element={<StartPage />} />
