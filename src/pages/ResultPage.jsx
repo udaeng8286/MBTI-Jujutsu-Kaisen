@@ -107,7 +107,6 @@ const ReplayButton = styled.button`
   cursor: pointer;
   font-family: "Song Myung", serif;
   font-size: 20px;
-  font-weight: bold;
   background-color: #2f3648;
   color: #fff;
   transition: background-color 0.3s, color 0.2s;

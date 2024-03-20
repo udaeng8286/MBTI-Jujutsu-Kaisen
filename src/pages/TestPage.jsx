@@ -104,7 +104,7 @@ const QuestionWrapper = styled.div`
 
 const Question = styled.p`
   color: white;
-  font-weight: bold;
+  font-size: 22px;
 `;
 
 const AnswerWrap = styled.div`
