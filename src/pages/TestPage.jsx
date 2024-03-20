@@ -3,6 +3,7 @@ import background from "../../public/images/asset/test_bg.png";
 import questionData from "../data/question.json";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ProgressBar from "../components/ProgressBar";
 
 const TestPage = () => {
   const navigate = useNavigate();
@@ -41,21 +42,21 @@ const TestPage = () => {
     if (currentIndex < questionData.length - 1) {
       setCurrentIndex((prevIndex) => {
         const nextIndex = prevIndex + 1;
-        console.log("다음 인덱스 ", nextIndex);
-        console.log("남은 질문수 ", questionData.length - nextIndex);
         return nextIndex;
       });
     } else {
       const mbtiType = calculateType();
-      console.log("끝", mbtiType);
       navigate(`/result?mbtiType=${encodeURIComponent(mbtiType)}`);
     }
   };
-  console.log("결과", typeResult);
 
   return (
     <Container>
       <TestContainer>
+        <ProgressBar
+          currentIndex={currentIndex}
+          totalQuestions={questionData.length}
+        />
         <QuestionWrapper>
           <Question>{questionData[currentIndex].question}</Question>
         </QuestionWrapper>
