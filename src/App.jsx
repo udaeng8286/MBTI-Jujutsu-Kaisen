@@ -5,8 +5,15 @@ import StartPage from "./pages/StartPage";
 import TestPage from "./pages/TestPage";
 import ResultPage from "./pages/ResultPage";
 import BackgroundMusic from "./components/BackgroundMusic";
+import ReactGA from "react-ga";
 
 function App() {
+  useEffect(() => {
+    const gaTrackingId = import.meta.env.VITE_GOOGLE_ANALYTICS_ID;
+    ReactGA.initialize(gaTrackingId, { debug: true });
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   return (
     <Container>
       <BackgroundMusic />
