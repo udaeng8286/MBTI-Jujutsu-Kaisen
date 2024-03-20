@@ -67,7 +67,7 @@ const ResultContainer = styled.div`
 `;
 
 const CharacterImg = styled.img`
-  width: 280px;
+  width: 60%;
   margin-bottom: 1.5rem;
 `;
 
@@ -92,7 +92,7 @@ const Info = styled.div`
 `;
 
 const BottomSection = styled.div`
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   width: 90%;
   display: flex;
   align-items: center;
@@ -100,18 +100,19 @@ const BottomSection = styled.div`
 `;
 
 const ReplayButton = styled.button`
-  width: 140px;
-  height: 80px;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
   margin-left: 1rem;
   cursor: pointer;
   font-family: "Song Myung", serif;
   font-size: 20px;
-  font-weight: bold;
+  background-color: #2f3648;
+  color: #fff;
   transition: background-color 0.3s, color 0.2s;
   border: none;
   &:hover {
-    background-color: #2f3648;
+    background-color: #dfdfdf;
     color: #fff;
   }
 `;

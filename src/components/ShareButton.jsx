@@ -87,14 +87,14 @@ const Container = styled.div`
 `;
 
 const Button = styled.button`
-  width: 76px;
-  height: 76px;
+  width: 68px;
+  height: 68px;
   background: none;
   border: none;
   cursor: pointer;
 `;
 
 const Icon = styled.img`
-  width: 100%;
+  width: 80%;
   height: auto;
 `;
