@@ -3,6 +3,7 @@ import background from "../../public/images/asset/test_bg.png";
 import questionData from "../data/question.json";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ProgressBar from "../components/ProgressBar";
 
 const TestPage = () => {
   const navigate = useNavigate();
@@ -56,6 +57,7 @@ const TestPage = () => {
   return (
     <Container>
       <TestContainer>
+        <ProgressBar />
         <QuestionWrapper>
           <Question>{questionData[currentIndex].question}</Question>
         </QuestionWrapper>
