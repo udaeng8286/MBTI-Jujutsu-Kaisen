@@ -10,6 +10,21 @@
       Kakao.init(kakaoAppKey);
     </script>
     <link rel="icon" href="/images/asset/logo.png" type="image/x-icon" />
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-BF69TR2RP8"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-BF69TR2RP8");
+    </script>
   </head>
   <body>
     <div id="root"></div>
