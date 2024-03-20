@@ -5,19 +5,14 @@ import StartPage from "./pages/StartPage";
 import TestPage from "./pages/TestPage";
 import ResultPage from "./pages/ResultPage";
 import BackgroundMusic from "./components/BackgroundMusic";
-import ReactGA from "react-ga";
+import RouteChangeTracker from "./components/RouteChangeTracker";
 
 function App() {
-  useEffect(() => {
-    const gaTrackingId = import.meta.env.VITE_GOOGLE_ANALYTICS_ID;
-    ReactGA.initialize(gaTrackingId, { debug: true });
-    ReactGA.pageview(window.location.pathname);
-  }, []);
-
   return (
     <Container>
       <BackgroundMusic />
       <Router>
+        <RouteChangeTracker />
         <Routes>
           <Route path="/" element={<StartPage />} />
           <Route path="/test" element={<TestPage />} />
