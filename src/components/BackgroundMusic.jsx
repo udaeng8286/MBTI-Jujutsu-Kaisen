@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styled from "styled-components";
 import { FaVolumeUp, FaVolumeMute } from "react-icons/fa";
 
 const BackgroundMusic = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const audio = new Audio(`/bgm.mp3`);
+  const audioRef = useRef(new Audio(`/bgm.mp3`));
 
   const toggleMusic = () => {
+    const audio = audioRef.current;
     if (isPlaying) {
       audio.pause();
     } else {
