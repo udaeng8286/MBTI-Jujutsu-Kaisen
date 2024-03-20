@@ -25,19 +25,20 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(${background});
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center end;
+  background-position: center;
   @media (max-width: 768px) {
     background-position: center;
   }
 `;
 
 const Logo = styled.img`
-  width: 100%;
+  width: 80%;
   @media (max-width: 768px) {
+    width: 100%;
     margin-top: -20px;
   }
 `;

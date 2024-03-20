@@ -22,14 +22,14 @@ const Container = styled.div`
   background-image: url(${background});
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center end;
+  background-position: center;
   @media (max-width: 768px) {
     background-position: center;
   }
 `;
 
 const Text = styled.div`
-  margin-top: 10rem;
+  top: 40%;
   margin-bottom: 1.5rem;
   font-weight: bold;
   @media (max-width: 768px) {
