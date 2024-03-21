@@ -97,6 +97,10 @@ const BottomSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 300px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const ReplayButton = styled.button`
@@ -114,5 +118,10 @@ const ReplayButton = styled.button`
   &:hover {
     background-color: #dfdfdf;
     color: #fff;
+  }
+  @media (max-width: 300px) {
+    height: 2rem;
+    width: 5rem;
+    margin-left: 0;
   }
 `;

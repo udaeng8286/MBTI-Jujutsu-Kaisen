@@ -96,11 +96,18 @@ const QuestionWrapper = styled.div`
   padding: 2rem 1rem;
   border-radius: 10px;
   white-space: pre-line;
+  @media (max-width: 300px) {
+    padding: 1rem 1rem;
+    margin-top: 25%;
+  }
 `;
 
 const Question = styled.p`
   color: white;
   font-size: 22px;
+  @media (max-width: 300px) {
+    font-size: 20px;
+  }
 `;
 
 const AnswerWrap = styled.div`
@@ -121,5 +128,9 @@ const Answer = styled.div`
 
   &:hover {
     background-color: #cdcdd5;
+  }
+
+  @media (max-width: 300px) {
+    font-size: 18px;
   }
 `;
