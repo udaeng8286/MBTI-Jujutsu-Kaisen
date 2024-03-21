@@ -19,26 +19,21 @@ const TestPage = () => {
     J: 0,
   });
 
-  // 선택된 답변들로 최종 유형 계산 함수
   const calculateType = () => {
     const type =
       (typeResult.E > typeResult.I ? "E" : "I") +
       (typeResult.N > typeResult.S ? "N" : "S") +
       (typeResult.T > typeResult.F ? "T" : "F") +
       (typeResult.J > typeResult.P ? "J" : "P");
-    console.log("Calculated MBTI Type:", type);
     return type;
   };
 
-  // 사용자가 답변 선택할 때 호출되는 함수
   const handleOptionSelect = (type) => {
-    // 선택된 답변에 따라 결과 업데이트
     setTypeResult((prevResult) => ({
       ...prevResult,
       [type]: prevResult[type] + 1,
     }));
 
-    // 다음 질문으로 이동 또는 결과 페이지로 이동
     if (currentIndex < questionData.length - 1) {
       setCurrentIndex((prevIndex) => {
         const nextIndex = prevIndex + 1;
